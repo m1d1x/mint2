@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'BBBOcelot';
+    src: url(../fonts/BBBOcelot-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Lilian';
+    src: url(../fonts/Lilian.ttf);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+html,
+body {
+    background: #c7e0ff;
+    background-image: url("../img/START_HUD.webp"), url("../img/NFT_OPTI.gif"), url("../img/PETS.webp"), url("../img/CATS3.webp"), url("../img/BACK_OPTI2.gif");
+    background-repeat: repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: bottom center, bottom 1% right 6%, bottom 1% right 5%, top 20% left, center center;
+    background-attachment: fixed, fixed, fixed, fixed, fixed;
+    background-size: 100% auto, 38% auto, 38% auto, 5% auto, 100% auto;
+
+}
+
+.container {
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+}
+
+.wrapper {
+    margin: 0;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.block {
+    padding-top: 5%;
+    padding-left: 12%;
+    
+    max-width: 1920px;
+    width: 50%;
+
+    
+}
+
+.block__row { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0px 0px 0px 0px;
+    
+}
+.block__item {
+    margin: 0px;
+    /*button animation */
+}
+
+.mint {
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    padding: 10px;
+    padding-top: 30px;
+    transition: 0.1s;
+}
+.mint:hover {
+    transition: 0.3s;
+    transform: scale(1.15);
+    width: 80%;
+    height: auto;
+    margin: 0px;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.timer {
+    /* padding-bottom: 7%; */
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    max-width: 1920px;
+    width: 45%;
+
+}
+
+.countdownH {
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    background: #000;
+    color: #fff;
+    font-family: 'BBBOcelot';
+    font-size: 36px;
+    transition: 0.1s;
+
+}
+
+.countdownH:hover {
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    background: #000;
+    color: #fff;
+    font-family: 'BBBOcelot';
+    font-size: 38px;
+    transition: 0.3s;
+
+}
+
+.countdownH:active {
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    background: #000;
+    color: #fff;
+    font-family: 'BBBOcelot';
+    font-size: 36px;
+    animation: shake 0.2s;
+    /* transition: 0.5s; */
+
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(8px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-7px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(7px, 0, 0);
+    }
+  }
+
+
+
+
+
+
+
+/*
+.phrases {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-end;
+    text-align: center;
+    max-width: 1920;
+    width: 60%;
+}
+
+.cont2 {
+    padding-bottom: 12%;
+    /* padding-left: 5%;
+}
+
+.phr {
+    color: #fff;
+    font-family: 'BBBOcelot';
+    font-size: 30px;
+    -webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    padding-left: 10%;
+} 
+*/
+
+
+
+
+
+
+
+@media screen and (max-width: 910px){
+
+    .wrapper {
+        margin: 0;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+
+    .block {
+        padding-top: 5%;
+        padding-left: 7%;
+
+        max-width: 1920px;
+        width: 95%;
+    }
+
+    .timer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-width: 1920px;
+        width: 95%;
+        padding-top: 10%;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+    .block {
+        padding-top: 5%;
+        padding-left: 7%;  
+        
+        max-width: 1920px;
+        width: 95%;
+    }
+    .mint {
+            width: 70%;
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+            padding-top: 0px;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    body {
+        background-size: 100% auto, 38% auto, 38% auto, 5% auto, auto 100%;
+    }
+}
